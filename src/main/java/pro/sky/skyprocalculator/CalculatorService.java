@@ -32,5 +32,4 @@ public class CalculatorService {
         int c = a / b;
         return a + " / " + b + " = " + c;
     }
-
 }
