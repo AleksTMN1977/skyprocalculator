@@ -1,36 +1,34 @@
 package pro.sky.skyprocalculator;
 
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class CalculatorService {
-    public String answerCalculator() {
-        return "Добро пожаловать в калькулятор!";
-    }
 
-    public String plusCalculator(@RequestParam("num1") int a, @RequestParam("num2") int b) {
+    public String plusCalculator(int a, int b) {
         int c = a + b;
-        return a + " + " + b + " = " + c;
+        return String.valueOf(c);
     }
 
 
-    public String minusCalculator(@RequestParam("num1") int a, @RequestParam("num2") int b) {
+    public String minusCalculator(int a, int b) {
         int c = a - b;
-        return a + " - " + b + " = " + c;
+        return String.valueOf(c);
     }
 
 
-    public String multiplyCalculator(@RequestParam("num1") int a, @RequestParam("num2") int b) {
+    public String multiplyCalculator(int a, int b) {
         int c = a * b;
-        return a + " * " + b + " = " + c;
+        return String.valueOf(c);
     }
 
 
-    public String divideCalculator(@RequestParam("num1") int a, @RequestParam("num2") int b) {
+    public String divideCalculator(int a, int b) {
         if (b == 0) {
             return "На ноль делить нельзя!";
         }
         int c = a / b;
-        return a + " / " + b + " = " + c;
+        return String.valueOf(c);
     }
-
 }
